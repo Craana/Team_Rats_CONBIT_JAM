@@ -12,7 +12,7 @@ public class zeroPuzzleState : PlayerState
 
     PlayerStateMachine playerStateMachine;
 
-    public bool onePuzzleDone = false;
+    public bool puzzleDoneBool = false;
 
     // Start is called before the first frame update
     void Start()
@@ -23,7 +23,7 @@ public class zeroPuzzleState : PlayerState
     // Update is called once per frame
     void Update()
     {
-        if (onePuzzleDone == true) 
+        if (puzzleDoneBool == true) 
         {
             playerStateMachine.PlayerChangeState(onePuzzle);
         }

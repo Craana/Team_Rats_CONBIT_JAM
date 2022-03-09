@@ -15,7 +15,7 @@ public class fivePuzzleState : PlayerState
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerStateMachine = GetComponentInParent<PlayerStateMachine>();
     }
 
     // Update is called once per frame

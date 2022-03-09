@@ -12,15 +12,20 @@ public class fourPuzzleState : PlayerState
 
     PlayerStateMachine playerStateMachine;
 
+    public bool puzzleDoneBool = false;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        playerStateMachine = GetComponentInParent<PlayerStateMachine>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (puzzleDoneBool == true)
+        {
+            playerStateMachine.PlayerChangeState(fivePuzzle);
+        }
     }
 }

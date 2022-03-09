@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 movement = new Vector2(xMove, yMove);
 
-        rb.MovePosition(rb.position + movement * movementSpeed * Time.deltaTime);
+        //Switched back to rb.addforce as rb.moveposition is meant for kinematinc rb's
+
+        rb.AddForce(movement * movementSpeed * Time.deltaTime);
     }
 }

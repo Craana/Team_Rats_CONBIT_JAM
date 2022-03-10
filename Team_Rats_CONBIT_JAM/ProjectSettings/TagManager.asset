@@ -7,6 +7,7 @@ TagManager:
   - BackGround
   - Enviornment
   - Wall
+  - PlayerMain
   layers:
   - Default
   - TransparentFX

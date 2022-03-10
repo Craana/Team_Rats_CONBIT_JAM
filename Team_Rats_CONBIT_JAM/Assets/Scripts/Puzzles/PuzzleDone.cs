@@ -12,8 +12,10 @@ public class PuzzleDone : MonoBehaviour
 
     GameObject player;
 
-    private void Start()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        // just here to test the PuzzleIsDone();
+
         player = GameObject.Find("Player");
 
         zeropuzzleState = player.transform.Find("ZeroPuzzleState(Clone)").GetComponent<zeroPuzzleState>();
@@ -21,11 +23,6 @@ public class PuzzleDone : MonoBehaviour
         twopuzzleState = player.transform.Find("TwoPuzzleState(Clone)").GetComponent<twoPuzzleState>();
         threepuzzleState = player.transform.Find("ThreePuzzleState(Clone)").GetComponent<threePuzzleState>();
         fourpuzzleState = player.transform.Find("FourPuzzleState(Clone)").GetComponent<fourPuzzleState>();
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        // just here to test the PuzzleIsDone();
 
         if (collision.CompareTag("Player")) 
         {
@@ -36,8 +33,6 @@ public class PuzzleDone : MonoBehaviour
     public void PuzzleIsDone() 
     {
         //Has to be done from the last puzzle state to the first
-
-        gameObject.SetActive(false);
 
         if (threepuzzleState.puzzleDoneBool == true && fourpuzzleState.puzzleDoneBool == false) 
         {

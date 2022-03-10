@@ -11,17 +11,17 @@ public class WinConditionFive : MonoBehaviour
     [SerializeField] threePuzzleState threepuzzleState;
     [SerializeField] fourPuzzleState fourpuzzleState;
 
-    GameObject player;
+    GameObject playerMain;
 
     private void Start()
     {
-        player = GameObject.Find("Player");
+        playerMain = GameObject.Find("PlayerMain");
 
-        zeropuzzleState = player.transform.Find("ZeroPuzzleState(Clone)").GetComponent<zeroPuzzleState>();
-        onepuzzleState = player.transform.Find("OnePuzzleState(Clone)").GetComponent<onePuzzleState>();
-        twopuzzleState = player.transform.Find("TwoPuzzleState(Clone)").GetComponent<twoPuzzleState>();
-        threepuzzleState = player.transform.Find("ThreePuzzleState(Clone)").GetComponent<threePuzzleState>();
-        fourpuzzleState = player.transform.Find("FourPuzzleState(Clone)").GetComponent<fourPuzzleState>();
+        zeropuzzleState = playerMain.transform.Find("ZeroPuzzleState(Clone)").GetComponent<zeroPuzzleState>();
+        onepuzzleState = playerMain.transform.Find("OnePuzzleState(Clone)").GetComponent<onePuzzleState>();
+        twopuzzleState = playerMain.transform.Find("TwoPuzzleState(Clone)").GetComponent<twoPuzzleState>();
+        threepuzzleState = playerMain.transform.Find("ThreePuzzleState(Clone)").GetComponent<threePuzzleState>();
+        fourpuzzleState = playerMain.transform.Find("FourPuzzleState(Clone)").GetComponent<fourPuzzleState>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -2,21 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Playables;
 
 public class PuzzleOneHazard : MonoBehaviour
 {
 
     [SerializeField] float restartTime;
-    [SerializeField] GameObject Player;
-    public AudioSource source;
+    [SerializeField] GameObject player;
+    [SerializeField] AudioSource fail;
+    [SerializeField] PlayableDirector failDirector;
 
+    private void Start()
+    {
+        player = GameObject.Find("Player");
+        failDirector = GameObject.Find("FailZoom").GetComponent<PlayableDirector>();
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            source.Play();
-            Destroy(collision.gameObject);           
+            collision.gameObject.GetComponent<Rigidbody2D>().simulated = false;
+
+            failDirector.Play();
+
+            fail = collision.gameObject.GetComponent<AudioSource>();
+
+            fail.Play();
+
             StartCoroutine(WaitLoadScene());        
         }
     }
@@ -25,6 +38,9 @@ public class PuzzleOneHazard : MonoBehaviour
     IEnumerator WaitLoadScene()
     {
         yield return new WaitForSeconds(restartTime);
+
+        Destroy(player);
+
         SceneManager.LoadScene("Puzzle1");
     }
 

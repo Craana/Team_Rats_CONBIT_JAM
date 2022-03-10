@@ -19,10 +19,9 @@ public class CodePanel : MonoBehaviour
     void Update()
     {
         codeText.text = codeTextValue;
-        if (codeTextValue == "1234")
+        if (codeTextValue == "7364")
         {
-            //Add piece of peace letter to the character and exit from this scene.
-            Debug.Log("You win!");
+            FindObjectOfType<WinConditionFour>().WinCondition();
         }
         if (codeTextValue.Length >= 4)
         {

@@ -87,5 +87,12 @@ public class TokenContro : MonoBehaviour
         token = GameObject.Find("Token");
     }
 
-
+    private void Update()
+    {
+        if (amountOfMatches == 3)
+        {
+            //Win condition
+            Debug.Log("You win!");
+        }
+    }
 }

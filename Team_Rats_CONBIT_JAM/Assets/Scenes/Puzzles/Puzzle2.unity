@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!20 &2035055115 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 3046759293966411461, guid: 5ee60760770a57d4d9cb637e7df946d5, type: 3}
+  m_PrefabInstance: {fileID: 3046759293793528592}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2258649281554721192
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -191,6 +196,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 2464231314089077422, guid: 8d89c6d641d7daa49acd36a58127a238, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2035055115}
     - target: {fileID: 2464231314089077423, guid: 8d89c6d641d7daa49acd36a58127a238, type: 3}
       propertyPath: m_Pivot.x
       value: 0

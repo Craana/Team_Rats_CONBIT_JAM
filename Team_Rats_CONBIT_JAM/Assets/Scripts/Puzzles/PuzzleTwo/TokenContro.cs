@@ -9,7 +9,7 @@ public class TokenContro : MonoBehaviour
     public static System.Random rnd = new System.Random();
     public int shuffleNum = 0;
     int[] visibleFaces = { -1, -2 };
-    [SerializeField]  int amountOfMatches;
+    public int amountOfMatches;
 
     void Start()
     {
@@ -87,12 +87,4 @@ public class TokenContro : MonoBehaviour
         token = GameObject.Find("Token");
     }
 
-    private void Update()
-    {
-        if (amountOfMatches == 3)
-        {
-            //Win condition
-            Debug.Log("You win!");
-        }
-    }
 }

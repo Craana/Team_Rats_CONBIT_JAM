@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class SlotScript : MonoBehaviour, IDropHandler
 {
     public int id;
+    
 
     public void OnDrop(PointerEventData eventData)
     {
@@ -15,6 +16,7 @@ public class SlotScript : MonoBehaviour, IDropHandler
             if (eventData.pointerDrag.GetComponent<DragAndDrop>().id == id)
             {
                 eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = this.GetComponent<RectTransform>().anchoredPosition;
+                FindObjectOfType<WinConditionThree>().AddScore();
             }
             else
             {

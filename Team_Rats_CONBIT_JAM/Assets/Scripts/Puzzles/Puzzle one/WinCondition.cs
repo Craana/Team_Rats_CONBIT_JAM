@@ -13,8 +13,6 @@ public class WinCondition : MonoBehaviour
 
     GameObject playerMain;
 
-    GameObject puzzle1Trigger;
-
     private void Start()
     {
         playerMain = GameObject.Find("PlayerMain");

@@ -29,7 +29,7 @@ public class WinConditionFour : MonoBehaviour
     {
         Debug.Log("Trigger me daddy.");
 
-        SceneManager.LoadSceneAsync("Scene2", LoadSceneMode.Single);
+        SceneManager.LoadScene("Scene2", LoadSceneMode.Single);
 
         PuzzleIsDone();
     }

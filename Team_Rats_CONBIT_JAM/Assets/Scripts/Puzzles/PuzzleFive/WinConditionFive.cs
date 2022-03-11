@@ -28,7 +28,7 @@ public class WinConditionFive : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadSceneAsync("Scene2", LoadSceneMode.Single);
+            SceneManager.LoadScene("Scene2", LoadSceneMode.Single);
 
             PuzzleIsDone();
         }

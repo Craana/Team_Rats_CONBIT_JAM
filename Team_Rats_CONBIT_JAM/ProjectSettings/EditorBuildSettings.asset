@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Puzzles/Puzzle5.unity
     guid: f9e98c9da47c4204ea97ba142089a4b6
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: 9cde999bf94a92f4f9f7ae3413c76a0b
   m_configObjects: {}

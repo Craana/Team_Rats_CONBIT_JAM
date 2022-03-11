@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class fivePuzzleState : PlayerState
 {
@@ -11,6 +12,12 @@ public class fivePuzzleState : PlayerState
     PlayerStateMachine.StatePlayer fivePuzzle = PlayerStateMachine.StatePlayer.fivePuzzle;
 
     PlayerStateMachine playerStateMachine;
+    
+
+    private void OnEnable()
+    {
+        SceneManager.LoadScene("EndScreen");
+    }
 
     // Start is called before the first frame update
     void Start()

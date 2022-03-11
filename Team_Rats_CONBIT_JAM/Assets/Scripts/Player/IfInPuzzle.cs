@@ -24,7 +24,7 @@ public class IfInPuzzle : MonoBehaviour
 
             transform.GetComponent<Rigidbody2D>().simulated = false;
 
-            transform.GetComponent<SpriteRenderer>().enabled = false;
+            transform.Find("PlayerSprite").GetComponent<SpriteRenderer>().enabled = false;
         }
         else 
         {
@@ -32,7 +32,7 @@ public class IfInPuzzle : MonoBehaviour
 
             transform.GetComponent<Rigidbody2D>().simulated = true;
 
-            transform.GetComponent<SpriteRenderer>().enabled = true;
+            transform.Find("PlayerSprite").GetComponent<SpriteRenderer>().enabled = true;
         }
     }
 }
